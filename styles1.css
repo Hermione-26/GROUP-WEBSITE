@@ -1,0 +1,544 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body styling */
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #2b4257;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+/* Main content */
+main {
+    flex: 1; /* This ensures the main content grows to take available space */
+
+}
+/* Navbar styling */
+/* Navbar styling */
+.navbar {
+    background-color: #292626;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 63px; /* Ensures the navbar has a consistent height */
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar .logo img {
+    height: 60px;
+    margin-left: 10px;
+}
+.navbar .logo h1 {
+    color: white;
+    margin: 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding-right: 20px;
+    height: 100%; /* Ensure the nav links stretch to fill the navbar height */
+    margin: 0;
+}
+.nav-links li {
+    transition: background-color 0.3s;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%; /* Ensure the list item stretches the full height of the navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links {
+    color: white;
+    text-decoration: none;
+}
+.nav-links li:hover {
+    background-color: #575757;
+    gap: 0px;
+    height: 100%; /* Ensure the hover effect covers the entire height of the navbar */
+}
+/* Home Section with Background Image and Opacity Overlay */
+.section-with-image {
+    position: relative;
+    background-image: url('comshop.jpg'); /* Change the URL to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 95vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Overlay to apply opacity effect */
+.section-with-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay with 0.7 opacity */
+    z-index: 1; /* Ensures the overlay is above the image but below the text */
+}
+
+/* Content inside the section */
+.section-with-image .content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    color: white;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+/* Ensure #about section takes full height or enough height */
+#about {
+    position: relative;
+    background-color: #576c7e;
+    color: #ffffff;
+    padding: 50px 50px;
+    min-height: 80vh; /* Ensure it covers the full height of the viewport */
+}
+
+/* Overlay style */
+#about .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is below the content */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+}
+
+/* Content inside the container */
+#about .container {
+    position: relative;
+    z-index: 2; /* Content should be above the overlay */
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Styling for the header */
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Style for unordered list */
+#about ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about ul li {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+/* Contact Section */
+#contact {
+    position: relative;
+    background-color: #576c7e;
+    color: #ffffff;
+    padding: 50px 50px;
+    min-height: 10vh; /* Adjusted for half-screen height */
+}
+
+/* Overlay style */
+#contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure overlay is below the content */
+}
+
+/* Content inside the container */
+#contact .container {
+    position: relative;
+    z-index: 2; /* Content should be above the overlay */
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Styling for the header */
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#contact h3 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling for paragraphs */
+#contact p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Styling for unordered list */
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+p {
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+li {
+    font-size: 1.2rem;
+}
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 100px; /* Adjust to limit text width */
+}
+footer {
+    background-color: #292626;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Ensures the footer stays at the bottom */
+}
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Footer text styling */
+footer p {
+    font-size: 0.9rem;
+}
+/* Style for the Services section */
+#services {
+    background-color: #2b4257;
+    color: #ffffff;
+    padding: 50px 50px;
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+}
+
+/* Content inside the container */
+#services .container {
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Styling for the header */
+#services h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for the services section */
+#services .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+#services .service-box {
+    background-color: #576c7e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .service-box h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#services .service-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Hover effect on service boxes */
+#services .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for unordered list */
+#services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#services ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+/* Developer Profile Section */
+#developer-profile {
+    position: relative;
+    background-color: #576c7e;
+    color: #ffffff;
+    padding: 50px 50px;
+    min-height: 80vh; /* Ensure it covers the full height of the viewport */
+}
+
+/* Overlay style */
+#developer-profile .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is below the content */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+}
+
+/* Content inside the container */
+#developer-profile .container {
+    position: relative;
+    z-index: 2; /* Content should be above the overlay */
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Styling for the header (Developer's Name) */
+#developer-profile h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Styling for Developer's Title */
+#developer-profile p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Profile Description Styling */
+#developer-profile .profile-description {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Skills Section Styling */
+#developer-profile .skills h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#developer-profile .skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#developer-profile .skills ul li {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+#facilities {
+    position: relative;
+    background-color: #2b4257;
+    color: #ffffff;
+    padding: 50px;
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+}
+
+/* Overlay style */
+#facilities .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is below the content */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+}
+
+/* Content inside the container */
+#facilities .container {
+    position: relative;
+    z-index: 2; /* Content should be above the overlay */
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    text-align: center;
+}
+
+/* Styling for the header */
+#facilities h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Image container for centering */
+#facilities .image-container {
+    margin-bottom: 20px;
+}
+
+/* Styling for the image */
+#facilities img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional, for rounded corners */
+}
+
+/* Styling for paragraph */
+#facilities p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: center;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 15px; /* Space between image and text */
+    margin-bottom: 150px;
+}
+.profile-info {
+    display: flex; /* This makes the name and description line up horizontally */
+    flex-direction: column; /* Makes the content stack vertically inside profile-info */
+}
+.profile-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.profile-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.profile-info a:hover {
+    text-decoration: underline;
+}
+#facilities-section {
+    position: relative;
+    background-color: #576c7e;
+    color: #ffffff;
+    padding: 50px;
+    min-height: 80vh; /* Ensure it covers the full height of the viewport */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Overlay Style */
+#facilities-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is below the content */
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+}
+
+/* Container for the facilities */
+#facilities-section .container {
+    position: relative;
+    z-index: 2; /* Content should be above the overlay */
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Facility Card */
+.facility {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    width: 400px;
+    text-align: center;
+    padding: 15px;
+    color: #333; /* Text color inside the facility cards */
+}
+
+/* Facility Image */
+.facility img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Facility Name */
+.facility h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Facility Description */
+.facility p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Header Styling */
+header h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: #333;
+}
